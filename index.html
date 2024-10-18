@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser History Simulation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Browser History Simulation</h1>
+    </header>
+
+    <!-- URL Input Section -->
+    <section class="input-section">
+        <div class="history-form">
+            <input type="text" id="url-input" placeholder="Enter URL">
+            <button onclick="visitPage()">Visit Page</button>
+        </div>
+
+        <!-- Search Bar for History -->
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search History..." oninput="searchHistory()">
+        </div>
+    </section>
+
+    <!-- Main Content Section with Navigation and History Display -->
+    <main>
+        <div class="navigation">
+            <button id="back-btn" onclick="goBack()">⬅ Back</button>
+            <button id="forward-btn" onclick="goForward()">Forward ➡</button>
+        </div>
+
+        <!-- Current Page Display -->
+        <div class="current-page-container">
+            <h2>Current Page:</h2>
+            <div id="current-page">No page visited</div>
+        </div>
+
+        <!-- Browser History List -->
+        <div class="history-container">
+            <h2>Browser History:</h2>
+            <ul id="history-list"></ul>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
